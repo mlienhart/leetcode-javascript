@@ -10,7 +10,7 @@ var fizzBuzz = function (n) {
         else if (i % 3 === 0) { a.push('Fizz'); }
         else if (i % 5 === 0) { a.push('Buzz'); }
         else { a.push(i.toString()); }
-    };
+    }
 
     return a;
 };
