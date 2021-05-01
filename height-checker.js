@@ -11,7 +11,7 @@ var heightChecker = function (heights) {
         if (a[i] !== heights[i]) {
             b++;
         }
-    }
+    };
 
     return b;
 };
