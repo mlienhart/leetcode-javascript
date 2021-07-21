@@ -4,7 +4,7 @@
  */
 var flipAndInvertImage = function (image) {
     let a = (b) => {
-        for (i = 0; i < b.length; i++) {
+        for (let i = 0; i < b.length; i++) {
             if (b[i] === 0) {
                 b[i]++;
             }

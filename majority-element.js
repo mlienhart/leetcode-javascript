@@ -6,7 +6,7 @@ var majorityElement = function (nums) {
     let map = new Map();
     let a = [];
 
-    for (i = 0; i < nums.length; i++) {
+    for (let i = 0; i < nums.length; i++) {
         map.set(nums[i], (map.get(nums[i]) || 0) + 1);
     }
 

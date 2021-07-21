@@ -5,7 +5,7 @@
 var repeatedNTimes = function (A) {
     let a = new Set();
 
-    for (i = 0; i < A.length; i++) {
+    for (let i = 0; i < A.length; i++) {
         if (a.has(A[i])) { return A[i]; }
         else { a.add(A[i]); }
     }

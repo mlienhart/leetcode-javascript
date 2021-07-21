@@ -5,7 +5,7 @@
 var sortedSquares = function (nums) {
     let a = [];
 
-    for (i = 0; i < nums.length; i++) {
+    for (let i = 0; i < nums.length; i++) {
         a.push(nums[i] * nums[i]);
     }
 

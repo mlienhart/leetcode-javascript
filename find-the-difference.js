@@ -9,11 +9,11 @@ var findTheDifference = function (s, t) {
     let c = [];
     let d = [];
 
-    for (i = 0; i < s.length; i++) {
+    for (let i = 0; i < s.length; i++) {
         c.push(a[i].charCodeAt());
     }
 
-    for (i = 0; i < t.length; i++) {
+    for (let i = 0; i < t.length; i++) {
         d.push(b[i].charCodeAt());
     }
 

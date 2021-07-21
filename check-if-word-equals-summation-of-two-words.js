@@ -24,15 +24,15 @@ var isSumEqual = function (firstWord, secondWord, targetWord) {
     let f = [];
     let g = [];
 
-    for (i = 0; i < a.length; i++) {
+    for (let i = 0; i < a.length; i++) {
         e.push(d[a[i]]);
     }
 
-    for (i = 0; i < b.length; i++) {
+    for (let i = 0; i < b.length; i++) {
         f.push(d[b[i]]);
     }
 
-    for (i = 0; i < c.length; i++) {
+    for (let i = 0; i < c.length; i++) {
         g.push(d[c[i]]);
     }
 

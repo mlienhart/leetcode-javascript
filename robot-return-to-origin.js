@@ -7,7 +7,7 @@ var judgeCircle = function (moves) {
     let b = 0;
     let c = 0;
 
-    for (i = 0; i < a.length; i++) {
+    for (let i = 0; i < a.length; i++) {
         if (a[i] === 'U') {
             b++;
         }

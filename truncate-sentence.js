@@ -7,7 +7,7 @@ var truncateSentence = function (s, k) {
     let a = s.split(" ");
     let arr = [];
 
-    for (i = 0; i < a.length; i++) {
+    for (let i = 0; i < a.length; i++) {
         if (i < k) {
             arr.push(a[i]);
         }

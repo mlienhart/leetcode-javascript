@@ -7,7 +7,7 @@ var kidsWithCandies = function (candies, extraCandies) {
     let a = Math.max(...candies);
     let b = [];
 
-    for (i = 0; i < candies.length; i++) {
+    for (let i = 0; i < candies.length; i++) {
         if ((candies[i] + extraCandies) >= a) {
             b.push(true);
         }

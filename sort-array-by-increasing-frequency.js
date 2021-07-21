@@ -5,7 +5,7 @@
 var frequencySort = function (nums) {
     let map = new Map();
 
-    for (i = 0; i < nums.length; i++) {
+    for (let i = 0; i < nums.length; i++) {
         map.set(nums[i], (map.get(nums[i]) || 0) + 1);
     }
 

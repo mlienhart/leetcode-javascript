@@ -8,7 +8,7 @@ var findLongestChain = function (pairs) {
     let a = 0;
     let b = -1000;
 
-    for ([x, y] of pairs) {
+    for (let [x, y] of pairs) {
         if (x > b) {
             b = y;
             a++;

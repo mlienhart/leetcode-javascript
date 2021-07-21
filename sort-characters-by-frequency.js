@@ -7,11 +7,11 @@ var frequencySort = function (s) {
     let map = new Map();
     let arr = [];
 
-    for (i = 0; i < a.length; i++) {
+    for (let i = 0; i < a.length; i++) {
         map.set(a[i], (map.get(a[i]) || 0) + 1);
     }
 
-    for ([key, value] of map.entries()) {
+    for (let [key, value] of map.entries()) {
         arr.push({ key: key, value: value });
     }
 
