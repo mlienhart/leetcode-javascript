@@ -3,11 +3,11 @@
  * @return {number[]}
  */
 var buildArray = function (nums) {
-    let a = [];
+  let a = [];
 
-    for (let i = 0; i < nums.length; i++) {
-        a[i] = nums[nums[i]];
-    }
+  for (let i = 0; i < nums.length; i++) {
+    a[i] = nums[nums[i]];
+  }
 
-    return a;
+  return a;
 };

@@ -3,20 +3,20 @@
  * @return {boolean}
  */
 var halvesAreAlike = function (s) {
-    let a = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
-    let b = 0;
+  let a = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
+  let b = 0;
 
-    for (let i = 0; i < s.length / 2; i++) {
-        if (a.includes(s[i])) {
-            b++;
-        }
+  for (let i = 0; i < s.length / 2; i++) {
+    if (a.includes(s[i])) {
+      b++;
     }
+  }
 
-    for (let i = s.length / 2; i < s.length; i++) {
-        if (a.includes(s[i])) {
-            b--;
-        }
+  for (let i = s.length / 2; i < s.length; i++) {
+    if (a.includes(s[i])) {
+      b--;
     }
+  }
 
-    return b === 0;
+  return b === 0;
 };

@@ -3,5 +3,5 @@
  * @return {number}
  */
 var countNegatives = function (grid) {
-    return grid.flat().filter(x => x < 0).length;
+  return grid.flat().filter((x) => x < 0).length;
 };
