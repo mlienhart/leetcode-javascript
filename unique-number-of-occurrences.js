@@ -3,20 +3,20 @@
  * @return {boolean}
  */
 var uniqueOccurrences = function (arr) {
-    let map = new Map();
-    let a = [];
+  let map = new Map();
+  let a = [];
 
-    for (let i = 0; i < arr.length; i++) {
-        map.set(arr[i], (map.get(arr[i]) || 0) + 1);
-    }
+  for (let i = 0; i < arr.length; i++) {
+    map.set(arr[i], (map.get(arr[i]) || 0) + 1);
+  }
 
-    for (let x of map.values()) {
-        a.push(x);
-    }
+  for (let x of map.values()) {
+    a.push(x);
+  }
 
-    if (a.length === [... new Set(a)].length) {
-        return true;
-    }
+  if (a.length === [...new Set(a)].length) {
+    return true;
+  }
 
-    return false;
+  return false;
 };

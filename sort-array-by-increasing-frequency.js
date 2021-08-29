@@ -3,13 +3,13 @@
  * @return {number[]}
  */
 var frequencySort = function (nums) {
-    let map = new Map();
+  let map = new Map();
 
-    for (let i = 0; i < nums.length; i++) {
-        map.set(nums[i], (map.get(nums[i]) || 0) + 1);
-    }
+  for (let i = 0; i < nums.length; i++) {
+    map.set(nums[i], (map.get(nums[i]) || 0) + 1);
+  }
 
-    nums.sort((a, b) => (map.get(a) - map.get(b)) || (b - a));
+  nums.sort((a, b) => map.get(a) - map.get(b) || b - a);
 
-    return nums;
+  return nums;
 };
