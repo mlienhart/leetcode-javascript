@@ -3,5 +3,5 @@
  * @return {string}
  */
 var interpret = function (command) {
-    return command.split("()").join("o").split("(al)").join("al");
+  return command.split("()").join("o").split("(al)").join("al");
 };

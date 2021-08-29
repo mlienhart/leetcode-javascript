@@ -3,19 +3,18 @@
  * @return {number[][]}
  */
 var flipAndInvertImage = function (image) {
-    let a = (b) => {
-        for (let i = 0; i < b.length; i++) {
-            if (b[i] === 0) {
-                b[i]++;
-            }
-            else {
-                b[i]--;
-            };
-        }
-        return b;
-    };
+  let a = (b) => {
+    for (let i = 0; i < b.length; i++) {
+      if (b[i] === 0) {
+        b[i]++;
+      } else {
+        b[i]--;
+      }
+    }
+    return b;
+  };
 
-    let b = image.map(x => x.reverse());
+  let b = image.map((x) => x.reverse());
 
-    return b.map(x => a(x));
+  return b.map((x) => a(x));
 };

@@ -3,12 +3,12 @@
  * @return {string}
  */
 var generateTheString = function (n) {
-    let a = "a";
-    let b = "b";
+  let a = "a";
+  let b = "b";
 
-    if (n % 2 !== 0) {
-        return a.repeat(n);
-    }
+  if (n % 2 !== 0) {
+    return a.repeat(n);
+  }
 
-    return a.repeat(n - 1) + b;
+  return a.repeat(n - 1) + b;
 };

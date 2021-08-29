@@ -3,10 +3,13 @@
  * @return {number}
  */
 var repeatedNTimes = function (A) {
-    let a = new Set();
+  let a = new Set();
 
-    for (let i = 0; i < A.length; i++) {
-        if (a.has(A[i])) { return A[i]; }
-        else { a.add(A[i]); }
+  for (let i = 0; i < A.length; i++) {
+    if (a.has(A[i])) {
+      return A[i];
+    } else {
+      a.add(A[i]);
     }
+  }
 };
