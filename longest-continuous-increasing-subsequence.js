@@ -9,7 +9,9 @@ var findLengthOfLCIS = function (nums) {
   for (let i = 0; i < nums.length; i++) {
     if (i === 0 || nums[i - 1] < nums[i]) {
       a = Math.max(a, ++b);
-    } else b = 1;
+    } else {
+      b = 1;
+    }
   }
 
   return a;
