@@ -3,14 +3,14 @@
  * @return {boolean}
  */
 var uniqueOccurrences = function (arr) {
-  let map = new Map();
   let a = [];
+  let b = new Map();
 
   for (let i = 0; i < arr.length; i++) {
-    map.set(arr[i], (map.get(arr[i]) || 0) + 1);
+    b.set(arr[i], (b.get(arr[i]) || 0) + 1);
   }
 
-  for (let x of map.values()) {
+  for (let x of b.values()) {
     a.push(x);
   }
 
