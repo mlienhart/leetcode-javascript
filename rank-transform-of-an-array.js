@@ -3,7 +3,7 @@
  * @return {number[]}
  */
 var arrayRankTransform = function (arr) {
-  let a = [...new Set(arr.map((x) => x).sort((a, b) => a - b))];
+  let a = [...new Set([...arr].sort((a, b) => a - b))];
   let b = [];
 
   for (let i = 0; i < arr.length; i++) {
