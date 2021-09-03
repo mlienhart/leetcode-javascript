@@ -3,14 +3,14 @@
  * @return {number}
  */
 var findLucky = function (arr) {
-  let map = new Map();
   let a = [];
+  let b = new Map();
 
   for (let i = 0; i < arr.length; i++) {
-    map.set(arr[i], (map.get(arr[i]) || 0) + 1);
+    b.set(arr[i], (b.get(arr[i]) || 0) + 1);
   }
 
-  for ([key, value] of map.entries()) {
+  for (let [key, value] of b.entries()) {
     if (key === value) {
       a.push(value);
     }
