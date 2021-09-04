@@ -4,8 +4,5 @@
  * @return {boolean}
  */
 var canBeEqual = function (target, arr) {
-  let a = target.sort().toString();
-  let b = arr.sort().toString();
-
-  return a === b;
+  return `${target.sort()}` === `${arr.sort()}`;
 };
