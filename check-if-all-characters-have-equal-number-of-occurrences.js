@@ -10,7 +10,7 @@ var areOccurrencesEqual = function (s) {
     map.set(s[i], (map.get(s[i]) || 0) + 1);
   }
 
-  for ([key, value] of map.entries()) {
+  for (let [key, value] of map.entries()) {
     a.push(value);
   }
 

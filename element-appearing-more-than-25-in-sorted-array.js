@@ -9,7 +9,7 @@ var findSpecialInteger = function (arr) {
     map.set(arr[i], (map.get(arr[i]) || 0) + 1);
   }
 
-  for ([key, value] of map.entries()) {
+  for (let [key, value] of map.entries()) {
     if (value > arr.length / 4) {
       return key;
     }

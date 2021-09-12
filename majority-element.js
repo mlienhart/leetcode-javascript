@@ -10,7 +10,7 @@ var majorityElement = function (nums) {
     map.set(nums[i], (map.get(nums[i]) || 0) + 1);
   }
 
-  for ([key, value] of map.entries()) {
+  for (let [key, value] of map.entries()) {
     a.push({ key: key, value: value });
   }
 
