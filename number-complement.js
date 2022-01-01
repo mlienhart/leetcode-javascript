@@ -3,12 +3,11 @@
  * @return {number}
  */
 var findComplement = function (num) {
-  let a = num.toString(2);
-  let b = [];
+  let a = num.toString(2).split("");
 
   for (let i = 0; i < a.length; i++) {
-    a[i] === "0" ? b.push("1") : b.push("0");
+    a[i] === "0" ? (a[i] = "1") : (a[i] = "0");
   }
 
-  return parseInt(b.join(""), 2);
+  return parseInt(a.join(""), 2);
 };
