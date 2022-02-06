@@ -8,11 +8,7 @@ var sortEvenOdd = function (nums) {
   let c = [];
 
   for (let i = 0; i < nums.length; i++) {
-    if (i % 2 === 0) {
-      a.push(nums[i]);
-    } else {
-      b.push(nums[i]);
-    }
+    i % 2 === 0 ? a.push(nums[i]) : b.push(nums[i]);
   }
 
   a.sort((a, b) => a - b);
