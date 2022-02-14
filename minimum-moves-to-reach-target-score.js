@@ -4,15 +4,15 @@
  * @return {number}
  */
 var minMoves = function (target, maxDoubles) {
-  let a = 0;
-
-  if (target > 0 && maxDoubles === 0) {
+  if (maxDoubles === 0) {
     return target - 1;
   }
 
+  let a = 0;
+
   while (target > 1) {
     if (target % 2 === 0 && maxDoubles > 0) {
-      target = target / 2;
+      target /= 2;
       maxDoubles--;
       a++;
     } else {
