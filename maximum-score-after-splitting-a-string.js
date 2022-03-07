@@ -8,7 +8,7 @@ var maxScore = function (s) {
 
   for (let i = 1; i < a.length; i++) {
     let x = a.slice(0, i).filter((x) => x === "0").length;
-    let y = a.slice(i, a.length).filter((x) => x === "1").length;
+    let y = a.slice(i).filter((x) => x === "1").length;
     b.push(x + y);
   }
 
