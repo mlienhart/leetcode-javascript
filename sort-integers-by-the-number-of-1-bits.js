@@ -8,10 +8,10 @@ var sortByBits = function (arr) {
       a
         .toString(2)
         .split("")
-        .filter((x) => !!+x).length -
+        .filter((x) => x === "1").length -
         b
           .toString(2)
           .split("")
-          .filter((x) => !!+x).length || a - b
+          .filter((x) => x === "1").length || a - b
   );
 };
