@@ -12,8 +12,9 @@ var selfDividingNumbers = function (left, right) {
   }
 
   for (let i = 0; i < a.length; i++) {
-    let c = `${a[i]}`.split("");
+    let c = [...a[i].toString()];
     let d = 0;
+
     for (let j = 0; j < c.length; j++) {
       if (a[i] % c[j] === 0) {
         d++;
