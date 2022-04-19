@@ -10,7 +10,9 @@ var hammingDistance = function (x, y) {
 
   if (a.length < b.length) {
     a = a.padStart(b.length, "0");
-  } else {
+  }
+
+  if (a.length > b.length) {
     b = b.padStart(a.length, "0");
   }
 
