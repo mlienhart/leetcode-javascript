@@ -10,10 +10,11 @@ var digitSum = function (s, k) {
     for (let i = 0; i < s.length; i = i + k) {
       let b = s.slice(i, i + k);
       let c = b.split("").reduce((a, b) => +a + +b, 0);
+
       a.push(c);
     }
 
-    s = a.reduce((a, b) => a.toString() + b.toString());
+    s = a.join("");
   }
 
   return s;
