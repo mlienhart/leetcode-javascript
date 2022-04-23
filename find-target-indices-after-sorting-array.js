@@ -4,7 +4,7 @@
  * @return {number[]}
  */
 var targetIndices = function (nums, target) {
-  nums.sort((a, b) => (a > b ? 1 : -1));
+  nums.sort((a, b) => a - b);
   let a = [];
 
   for (let i = 0; i < nums.length; i++) {
