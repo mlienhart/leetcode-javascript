@@ -3,7 +3,7 @@
  * @return {number[]}
  */
 var findDisappearedNumbers = function (nums) {
-  let a = [...new Set([...nums].sort((a, b) => (a < b ? -1 : 1)))];
+  let a = [...new Set([...nums].sort((a, b) => a - b))];
   let b = [];
   let c = [];
 
