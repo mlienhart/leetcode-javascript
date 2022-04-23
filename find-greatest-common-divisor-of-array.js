@@ -3,8 +3,8 @@
  * @return {number}
  */
 var findGCD = function (nums) {
-  let a = [...nums].sort((a, b) => (a > b ? 1 : -1));
-  let b = [...nums].sort((a, b) => (a < b ? 1 : -1));
+  let a = [...nums].sort((a, b) => a - b);
+  let b = [...nums].sort((a, b) => b - a);
   let c = a[0];
   let d = b[0];
 
