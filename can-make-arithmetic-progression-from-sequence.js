@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 var canMakeArithmeticProgression = function (arr) {
-  arr.sort((a, b) => (a > b ? 1 : -1));
+  arr.sort((a, b) => a - b);
 
   let a = arr[1] - arr[0];
   let b = 0;
