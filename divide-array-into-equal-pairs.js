@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 var divideArray = function (nums) {
-  nums.sort((a, b) => (a < b ? 1 : -1));
+  nums.sort((a, b) => b - a);
 
   for (let i = 0; i < nums.length; i = i + 2) {
     if (nums[i] !== nums[i + 1]) {
