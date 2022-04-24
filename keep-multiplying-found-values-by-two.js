@@ -4,7 +4,7 @@
  * @return {number}
  */
 var findFinalValue = function (nums, original) {
-  nums.sort((a, b) => (a > b ? 1 : -1));
+  nums.sort((a, b) => a - b);
 
   for (let i = 0; i < nums.length; i++) {
     if (original === nums[i]) {
