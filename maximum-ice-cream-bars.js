@@ -4,7 +4,7 @@
  * @return {number}
  */
 var maxIceCream = function (costs, coins) {
-  costs.sort((a, b) => (a < b ? -1 : 1));
+  costs.sort((a, b) => a - b);
 
   let a = 0;
 
