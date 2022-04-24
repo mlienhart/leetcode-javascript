@@ -14,5 +14,5 @@ var majorityElement = function (nums) {
     a.push({ key: key, value: value });
   }
 
-  return a.sort((a, b) => (a.value > b.value ? -1 : 1))[0].key;
+  return a.sort((a, b) => b.value - a.value)[0].key;
 };
