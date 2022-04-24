@@ -5,7 +5,7 @@
 var trimMean = function (arr) {
   let a = arr.length * 0.05;
 
-  arr.sort((a, b) => (a < b ? -1 : 1));
+  arr.sort((a, b) => a - b);
 
   for (let i = 0; i < a; i++) {
     arr.shift();
