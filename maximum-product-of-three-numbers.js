@@ -3,7 +3,7 @@
  * @return {number}
  */
 var maximumProduct = function (nums) {
-  nums.sort((a, b) => (a < b ? -1 : 1));
+  nums.sort((a, b) => a - b);
 
   return Math.max(
     nums[0] * nums[1] * nums[nums.length - 1],
