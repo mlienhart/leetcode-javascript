@@ -4,7 +4,7 @@
  */
 var lastStoneWeight = function (stones) {
   while (stones.length > 1) {
-    stones.sort((a, b) => (a > b ? 1 : -1));
+    stones.sort((a, b) => a - b);
     let a = stones.pop();
     let b = stones.pop();
 
