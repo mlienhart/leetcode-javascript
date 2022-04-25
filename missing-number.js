@@ -3,7 +3,7 @@
  * @return {number}
  */
 var missingNumber = function (nums) {
-  nums.sort((a, b) => (a < b ? -1 : 1));
+  nums.sort((a, b) => a - b);
 
   if (nums[0] === 1) {
     return 0;
