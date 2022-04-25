@@ -3,7 +3,7 @@
  * @return {number[][]}
  */
 var minimumAbsDifference = function (arr) {
-  arr.sort((a, b) => (a > b ? 1 : -1));
+  arr.sort((a, b) => a - b);
   let a = [];
   let b = Infinity;
 
