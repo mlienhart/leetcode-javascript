@@ -3,7 +3,7 @@
  * @return {number}
  */
 var minPairSum = function (nums) {
-  nums.sort((a, b) => (a < b ? -1 : 1));
+  nums.sort((a, b) => a - b);
   let a = 0;
 
   for (let i = 0; i < nums.length / 2; i++) {
