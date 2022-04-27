@@ -4,7 +4,7 @@
  */
 var findRelativeRanks = function (score) {
   let a = [];
-  let b = score.map((x) => x).sort((a, b) => (a > b ? -1 : 1));
+  let b = score.map((x) => x).sort((a, b) => b - a);
 
   for (let i = 0; i < score.length; i++) {
     if (score[i] === b[0]) {
