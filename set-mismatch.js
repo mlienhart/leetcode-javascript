@@ -3,7 +3,7 @@
  * @return {number[]}
  */
 var findErrorNums = function (nums) {
-  nums.sort((a, b) => (a < b ? -1 : 1));
+  nums.sort((a, b) => a - b);
   let a = [];
   let b = [...new Set([...nums])];
 
