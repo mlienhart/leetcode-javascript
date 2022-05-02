@@ -11,7 +11,7 @@ var restoreString = function (s, indices) {
   }
 
   return a
-    .sort((a, b) => (a.a < b.a ? -1 : 1))
+    .sort((a, b) => a.a - b.a)
     .map((x) => x.b)
     .join("");
 };
