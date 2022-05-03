@@ -15,7 +15,7 @@ var frequencySort = function (s) {
     arr.push({ key: key, value: value });
   }
 
-  let b = arr.sort((a, b) => (a.value > b.value ? -1 : 1));
+  let b = arr.sort((a, b) => b.value - a.value);
 
   return b.map((x) => x.key.repeat(x.value)).join("");
 };
