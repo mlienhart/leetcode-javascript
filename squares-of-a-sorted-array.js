@@ -9,5 +9,5 @@ var sortedSquares = function (nums) {
     a.push(nums[i] * nums[i]);
   }
 
-  return a.sort((a, b) => (a < b ? -1 : 1));
+  return a.sort((a, b) => a - b);
 };
