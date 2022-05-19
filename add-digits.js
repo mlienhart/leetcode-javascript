@@ -3,11 +3,13 @@
  * @return {number}
  */
 var addDigits = function (num) {
-  if (num === 0) {
-    return 0;
-  } else if (num % 9 === 0) {
-    return 9;
-  } else {
-    return num % 9;
+  while (num.length !== 1) {
+    num = num
+      .toString()
+      .split("")
+      .reduce((a, b) => +a + +b)
+      .toString();
   }
+
+  return +num;
 };
