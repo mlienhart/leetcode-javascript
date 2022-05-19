@@ -3,7 +3,7 @@
  * @return {number}
  */
 var addDigits = function (num) {
-  while (num.length !== 1) {
+  while (num.toString().length !== 1) {
     num = num
       .toString()
       .split("")
