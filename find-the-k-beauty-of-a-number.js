@@ -8,8 +8,8 @@ var divisorSubstrings = function (num, k) {
   let b = num.toString();
 
   for (let i = 0; i < b.length; i++) {
-    let c = b.split("").slice(i, i + k);
-    if (num % +c.join("") === 0 && c.length === k) {
+    let c = b.slice(i, i + k);
+    if (num % +c === 0 && c.length === k) {
       a++;
     }
   }
