@@ -8,7 +8,7 @@ var groupAnagrams = function (strs) {
   for (let x of strs) {
     let a = x
       .split("")
-      .sort((a, b) => (a < b ? -1 : 1))
+      .sort((a, b) => (a > b ? 1 : -1))
       .join("");
     if (!map.get(a)) {
       map.set(a, []);
