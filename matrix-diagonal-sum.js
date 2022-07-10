@@ -19,7 +19,7 @@ var diagonalSum = function (mat) {
 
   if (mat.length % 2 !== 0) {
     for (let i = 0; i < mat.length; i++) {
-      if (i < Math.floor(mat.length / 2) || i > Math.floor(mat.length / 2)) {
+      if (i !== Math.floor(mat.length / 2)) {
         a.push(mat[i][i]);
       }
     }
