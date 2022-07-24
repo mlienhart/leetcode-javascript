@@ -4,7 +4,7 @@
  * @return {string}
  */
 var bestHand = function (ranks, suits) {
-  if (suits.every((x) => x === suits[0])) {
+  if (new Set(suits).size === 1) {
     return "Flush";
   }
 
@@ -16,7 +16,7 @@ var bestHand = function (ranks, suits) {
     return "Three of a Kind";
   }
 
-  if (new Set(ranks).size !== ranks.length) {
+  if (new Set(ranks).size < 5) {
     return "Pair";
   }
 
