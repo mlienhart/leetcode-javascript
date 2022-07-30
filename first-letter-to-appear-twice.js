@@ -3,7 +3,7 @@
  * @return {character}
  */
 var repeatedCharacter = function (s) {
-  let a = new Set();
+  const a = new Set();
 
   for (const b of s) {
     if (!a.has(b)) {
