@@ -3,15 +3,13 @@
  * @return {number}
  */
 var findSpecialInteger = function (arr) {
-  let map = new Map();
+  const a = {};
 
-  for (let i = 0; i < arr.length; i++) {
-    map.set(arr[i], (map.get(arr[i]) || 0) + 1);
-  }
+  arr.forEach((x) => (a[x] = a[x] ? a[x] + 1 : 1));
 
-  for (let [key, value] of map.entries()) {
+  for (const [key, value] of Object.entries(a)) {
     if (value > arr.length / 4) {
-      return key;
+      return +key;
     }
   }
 };
