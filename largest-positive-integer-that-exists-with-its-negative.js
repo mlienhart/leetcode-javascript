@@ -7,7 +7,7 @@ var findMaxK = function (nums) {
 
   for (const b of nums) {
     let c = nums.find((x) => x === -b);
-    if (c && c > a) {
+    if (c > a) {
       a = c;
     }
   }
