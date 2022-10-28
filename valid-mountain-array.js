@@ -17,12 +17,12 @@ var validMountainArray = function (arr) {
       b++;
       let c = arr.slice(i);
       for (let i = 0; i < c.length; i++) {
-        if (c[i + 1] >= c[i]) {
+        if (c[i] <= c[i + 1]) {
           return false;
         }
       }
     }
   }
 
-  return a >= 1 && b >= 1;
+  return !!(a && b);
 };
