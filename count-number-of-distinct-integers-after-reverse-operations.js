@@ -3,12 +3,11 @@
  * @return {number}
  */
 var countDistinctIntegers = function (nums) {
-  let a = [...nums];
+  const a = new Set(nums);
 
-  for (let i = 0; i < nums.length; i++) {
-    let b = +nums[i].toString().split("").reverse().join("");
-    a.push(b);
+  for (const x of nums) {
+    a.add(+x.toString().split("").reverse().join(""));
   }
 
-  return new Set(a).size;
+  return a.size;
 };
