@@ -3,18 +3,11 @@
  * @return {boolean}
  */
 var areOccurrencesEqual = function (s) {
-  let map = new Map();
-  let a = [];
+  const a = {};
 
-  for (let i = 0; i < s.length; i++) {
-    map.set(s[i], (map.get(s[i]) || 0) + 1);
+  for (const b of s) {
+    a[b] = a[b] ? a[b] + 1 : 1;
   }
 
-  for (let [key, value] of map.entries()) {
-    a.push(value);
-  }
-
-  let b = a[0];
-
-  return a.every((x) => x === b);
+  return new Set(Object.values(a)).size === 1;
 };
