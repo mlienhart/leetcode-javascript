@@ -3,7 +3,5 @@
  * @return {number[]}
  */
 var plusOne = function (digits) {
-  let a = BigInt(digits.join(""));
-
-  return (++a).toString().split("").map(Number);
+  return (BigInt(digits.join("")) + 1n).toString().split("").map(Number);
 };
