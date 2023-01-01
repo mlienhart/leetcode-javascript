@@ -3,7 +3,10 @@
  * @return {number}
  */
 var countDigits = function (num) {
-  const a = num.toString().split("");
+  const a = num
+    .toString()
+    .split("")
+    .map((x) => +x);
   let b = 0;
 
   for (const c of a) {
