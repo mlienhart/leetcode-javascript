@@ -4,19 +4,18 @@
  * @return {string}
  */
 var addSpaces = function (s, spaces) {
-  let a = s.split("");
-  let b = [];
-  let c = 0;
+  const result = [];
+  let increment = 0;
 
-  for (let i = 0; i < a.length; i++) {
-    if (i === spaces[c]) {
-      b.push(" ");
-      c++;
+  for (let i = 0; i < s.length; i++) {
+    if (i === spaces[increment]) {
+      result.push(" ");
+      increment++;
     }
-    if (i !== spaces[c]) {
-      b.push(a[i]);
+    if (i !== spaces[increment]) {
+      result.push(s[i]);
     }
   }
 
-  return b.join("");
+  return result.join("");
 };
