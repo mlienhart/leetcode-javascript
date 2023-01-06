@@ -3,9 +3,10 @@
  * @return {number}
  */
 var average = function (salary) {
-  let a = Math.max(...salary);
-  let b = Math.min(...salary);
-  let c = salary.reduce((a, b) => a + b, 0) - a - b;
-
-  return c / (salary.length - 2);
+  return (
+    (salary.reduce((a, b) => a + b, 0) -
+      Math.max(...salary) -
+      Math.min(...salary)) /
+    (salary.length - 2)
+  );
 };
