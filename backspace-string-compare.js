@@ -4,18 +4,18 @@
  * @return {boolean}
  */
 var backspaceCompare = function (s, t) {
-  let a = s.split("");
-  let b = t.split("");
-  let c = [];
-  let d = [];
+  const first = s.split("");
+  const second = t.split("");
+  const firstResult = [];
+  const secondResult = [];
 
-  for (let i = 0; i < a.length; i++) {
-    a[i] !== "#" ? c.push(a[i]) : c.pop();
+  for (let i = 0; i < first.length; i++) {
+    first[i] !== "#" ? firstResult.push(first[i]) : firstResult.pop();
   }
 
-  for (let i = 0; i < b.length; i++) {
-    b[i] !== "#" ? d.push(b[i]) : d.pop();
+  for (let i = 0; i < second.length; i++) {
+    second[i] !== "#" ? secondResult.push(second[i]) : secondResult.pop();
   }
 
-  return c.join("") === d.join("");
+  return firstResult.join("") === secondResult.join("");
 };
