@@ -4,10 +4,10 @@
  * @return {number}
  */
 var isPrefixOfWord = function (sentence, searchWord) {
-  let a = sentence.split(" ");
+  const words = sentence.split(" ");
 
-  for (let i = 0; i < a.length; i++) {
-    if (a[i].startsWith(searchWord)) {
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].startsWith(searchWord)) {
       return i + 1;
     }
   }
