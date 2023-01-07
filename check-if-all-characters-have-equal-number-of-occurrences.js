@@ -3,11 +3,11 @@
  * @return {boolean}
  */
 var areOccurrencesEqual = function (s) {
-  const a = {};
+  const counts = {};
 
-  for (const b of s) {
-    a[b] = a[b] ? a[b] + 1 : 1;
+  for (const character of s) {
+    counts[character] = counts[character] ? counts[character] + 1 : 1;
   }
 
-  return new Set(Object.values(a)).size === 1;
+  return new Set(Object.values(counts)).size === 1;
 };
