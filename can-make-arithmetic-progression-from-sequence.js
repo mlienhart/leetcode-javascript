@@ -4,15 +4,14 @@
  */
 var canMakeArithmeticProgression = function (arr) {
   arr.sort((a, b) => a - b);
-
-  let a = arr[1] - arr[0];
-  let b = 0;
+  const difference = arr[1] - arr[0];
+  let result = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] - arr[i - 1] === a) {
-      b++;
+    if (arr[i] - arr[i - 1] === difference) {
+      result++;
     }
   }
 
-  return b === arr.length - 1;
+  return result === arr.length - 1;
 };
