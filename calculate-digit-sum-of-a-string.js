@@ -5,16 +5,17 @@
  */
 var digitSum = function (s, k) {
   while (s.length > k) {
-    let a = [];
+    const result = [];
 
     for (let i = 0; i < s.length; i = i + k) {
-      let b = s.slice(i, i + k);
-      let c = b.split("").reduce((a, b) => +a + +b, 0);
-
-      a.push(c);
+      let sum = s
+        .slice(i, i + k)
+        .split("")
+        .reduce((a, b) => +a + +b, 0);
+      result.push(sum);
     }
 
-    s = a.join("");
+    s = result.join("");
   }
 
   return s;
