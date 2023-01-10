@@ -3,13 +3,13 @@
  * @return {boolean}
  */
 var digitCount = function (num) {
-  let a = {};
+  const counts = {};
 
-  for (const b of num) {
-    a[b] = a[b] ? a[b] + 1 : 1;
+  for (const character of num) {
+    counts[character] = counts[character] ? counts[character] + 1 : 1;
   }
 
-  for (const [key, value] of Object.entries(a)) {
+  for (const [key, value] of Object.entries(counts)) {
     if (value !== +num[key]) {
       return false;
     }
