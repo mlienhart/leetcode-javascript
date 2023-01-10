@@ -3,13 +3,13 @@
  * @return {boolean}
  */
 var check = function (nums) {
-  let a = 0;
+  let result = 0;
 
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] > nums[(i + 1) % nums.length]) {
-      a++;
+      result++;
     }
   }
 
-  return a <= 1;
+  return result <= 1;
 };
