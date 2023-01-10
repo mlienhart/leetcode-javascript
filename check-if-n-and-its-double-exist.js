@@ -3,13 +3,13 @@
  * @return {boolean}
  */
 var checkIfExist = function (arr) {
-  let a = new Set();
+  const set = new Set();
 
   for (let i = 0; i < arr.length; i++) {
-    if (a.has(arr[i] * 2) || a.has(arr[i] / 2)) {
+    if (set.has(arr[i] * 2) || set.has(arr[i] / 2)) {
       return true;
     }
-    a.add(arr[i]);
+    set.add(arr[i]);
   }
 
   return false;
