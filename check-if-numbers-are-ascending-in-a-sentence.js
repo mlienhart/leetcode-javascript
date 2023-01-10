@@ -3,16 +3,13 @@
  * @return {boolean}
  */
 var areNumbersAscending = function (s) {
-  let a = s.split(" ");
+  const numbers = s
+    .split(" ")
+    .filter((x) => !isNaN(x))
+    .map((x) => +x);
 
-  for (let i = 0; i < a.length; i++) {
-    a[i] = +a[i];
-  }
-
-  let b = a.filter(Boolean);
-
-  for (let i = 0; i < b.length; i++) {
-    if (b[i] >= b[i + 1]) {
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] >= numbers[i + 1]) {
       return false;
     }
   }
