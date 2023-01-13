@@ -4,11 +4,11 @@
  * @return {boolean}
  */
 var isPrefixString = function (s, words) {
-  let a = [];
+  const result = [];
 
-  for (let i = 0; i < words.length; i++) {
-    a.push(words[i]);
-    if (a.join("") === s) {
+  for (const word of words) {
+    result.push(word);
+    if (result.join("") === s) {
       return true;
     }
   }
