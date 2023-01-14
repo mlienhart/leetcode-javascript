@@ -5,10 +5,7 @@
  * @return {boolean}
  */
 var isSumEqual = function (firstWord, secondWord, targetWord) {
-  let a = firstWord.split("");
-  let b = secondWord.split("");
-  let c = targetWord.split("");
-  let d = {
+  const dictionary = {
     a: "0",
     b: "1",
     c: "2",
@@ -20,21 +17,23 @@ var isSumEqual = function (firstWord, secondWord, targetWord) {
     i: "8",
     j: "9",
   };
-  let e = [];
-  let f = [];
-  let g = [];
+  const firstWordSum = [];
+  const secondWordSum = [];
+  const targetWordSum = [];
 
-  for (let i = 0; i < a.length; i++) {
-    e.push(d[a[i]]);
+  for (let i = 0; i < firstWord.length; i++) {
+    firstWordSum.push(dictionary[firstWord[i]]);
   }
 
-  for (let i = 0; i < b.length; i++) {
-    f.push(d[b[i]]);
+  for (let i = 0; i < secondWord.length; i++) {
+    secondWordSum.push(dictionary[secondWord[i]]);
   }
 
-  for (let i = 0; i < c.length; i++) {
-    g.push(d[c[i]]);
+  for (let i = 0; i < targetWord.length; i++) {
+    targetWordSum.push(dictionary[targetWord[i]]);
   }
 
-  return +e.join("") + +f.join("") === +g.join("");
+  return (
+    +firstWordSum.join("") + +secondWordSum.join("") === +targetWordSum.join("")
+  );
 };
