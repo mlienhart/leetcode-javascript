@@ -9,11 +9,11 @@ var construct2DArray = function (original, m, n) {
     return [];
   }
 
-  let a = [];
+  const result = [];
 
   for (let i = 0; i < m; i++) {
-    a.push(original.splice(0, n));
+    result.push(original.splice(0, n));
   }
 
-  return a;
+  return result;
 };
