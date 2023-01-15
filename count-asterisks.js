@@ -3,15 +3,15 @@
  * @return {number}
  */
 var countAsterisks = function (s) {
-  let a = s.split("|");
-  let b = 0;
+  const list = s.split("|");
+  let result = 0;
 
-  for (let i = 0; i < a.length; i = i + 2) {
-    let c = a[i].split("").filter((x) => x === "*");
-    if (c.length > 0) {
-      b = b + c.length;
+  for (let i = 0; i < list.length; i = i + 2) {
+    let asterisksCount = list[i].split("").filter((x) => x === "*").length;
+    if (asterisksCount) {
+      result = result + asterisksCount;
     }
   }
 
-  return b;
+  return result;
 };
