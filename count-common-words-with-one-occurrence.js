@@ -4,23 +4,26 @@
  * @return {number}
  */
 var countWords = function (words1, words2) {
-  let a = new Map();
-  let b = new Map();
-  let c = 0;
+  const firstWordsCounts = new Map();
+  const secondWordsCounts = new Map();
+  let result = 0;
 
   for (let i = 0; i < words1.length; i++) {
-    a.set(words1[i], (a.get(words1[i]) || 0) + 1);
+    firstWordsCounts.set(words1[i], (firstWordsCounts.get(words1[i]) || 0) + 1);
   }
 
   for (let i = 0; i < words2.length; i++) {
-    b.set(words2[i], (b.get(words2[i]) || 0) + 1);
+    secondWordsCounts.set(
+      words2[i],
+      (secondWordsCounts.get(words2[i]) || 0) + 1
+    );
   }
 
-  for (let x of words1) {
-    if (a.get(x) === 1 && b.get(x) === 1) {
-      c++;
+  for (const word of words1) {
+    if (firstWordsCounts.get(word) === 1 && secondWordsCounts.get(word) === 1) {
+      result++;
     }
   }
 
-  return c;
+  return result;
 };
