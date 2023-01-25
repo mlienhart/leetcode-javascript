@@ -4,7 +4,7 @@
  * @return {number}
  */
 var countPairs = function (nums, k) {
-  let a = 0;
+  let result = 0;
 
   for (let i = 0; i < nums.length - 1; i++) {
     for (let j = i + 1; j < nums.length; j++) {
@@ -14,10 +14,10 @@ var countPairs = function (nums, k) {
         nums[i] === nums[j] &&
         (i * j) % k === 0
       ) {
-        a++;
+        result++;
       }
     }
   }
 
-  return a;
+  return result;
 };
