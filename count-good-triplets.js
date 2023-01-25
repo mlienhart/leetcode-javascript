@@ -6,7 +6,7 @@
  * @return {number}
  */
 var countGoodTriplets = function (arr, a, b, c) {
-  let x = 0;
+  let result = 0;
 
   for (let i = 0; i < arr.length - 2; i++) {
     for (let j = i + 1; j < arr.length - 1; j++) {
@@ -16,11 +16,11 @@ var countGoodTriplets = function (arr, a, b, c) {
           Math.abs(arr[j] - arr[k]) <= b &&
           Math.abs(arr[i] - arr[k]) <= c
         ) {
-          x++;
+          result++;
         }
       }
     }
   }
 
-  return x;
+  return result;
 };
