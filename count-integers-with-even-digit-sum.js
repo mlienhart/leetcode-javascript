@@ -3,17 +3,17 @@
  * @return {number}
  */
 var countEven = function (num) {
-  let a = 0;
+  let result = 0;
 
   for (let i = 1; i <= num; i++) {
-    let b = i
+    let sum = i
       .toString()
       .split("")
       .reduce((a, b) => +a + +b);
-    if (b % 2 === 0) {
-      a++;
+    if (sum % 2 === 0) {
+      result++;
     }
   }
 
-  return a;
+  return result;
 };
