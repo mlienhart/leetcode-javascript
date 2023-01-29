@@ -3,7 +3,7 @@
  * @return {number}
  */
 var countHillValley = function (nums) {
-  let a = 0;
+  let result = 0;
 
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] === nums[i + 1]) {
@@ -11,16 +11,16 @@ var countHillValley = function (nums) {
     }
   }
 
-  nums = nums.filter((x) => x !== "");
+  nums = nums.filter((x) => !!x);
 
   for (let i = 1; i < nums.length - 1; i++) {
     if (
       (nums[i - 1] < nums[i] && nums[i] > nums[i + 1]) ||
       (nums[i - 1] > nums[i] && nums[i] < nums[i + 1])
     ) {
-      a++;
+      result++;
     }
   }
 
-  return a;
+  return result;
 };
