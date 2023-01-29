@@ -5,21 +5,17 @@
  * @return {number}
  */
 var countMatches = function (items, ruleKey, ruleValue) {
-  let a = 0;
+  let result = 0;
 
   for (let i = 0; i < items.length; i++) {
-    if (ruleKey === "type" && ruleValue === items[i][0]) {
-      a++;
-    }
-
-    if (ruleKey === "color" && ruleValue === items[i][1]) {
-      a++;
-    }
-
-    if (ruleKey === "name" && ruleValue === items[i][2]) {
-      a++;
+    if (
+      (ruleKey === "type" && ruleValue === items[i][0]) ||
+      (ruleKey === "color" && ruleValue === items[i][1]) ||
+      (ruleKey === "name" && ruleValue === items[i][2])
+    ) {
+      result++;
     }
   }
 
-  return a;
+  return result;
 };
