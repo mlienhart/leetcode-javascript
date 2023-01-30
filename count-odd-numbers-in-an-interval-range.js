@@ -4,13 +4,13 @@
  * @return {number}
  */
 var countOdds = function (low, high) {
-  let a = 0;
+  let result = 0;
 
   for (let i = low; i <= high; i++) {
     if (i % 2 !== 0) {
-      a++;
+      result++;
     }
   }
 
-  return a;
+  return result;
 };
