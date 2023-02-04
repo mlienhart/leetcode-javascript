@@ -4,16 +4,16 @@
  * @return {number}
  */
 var countOperations = function (num1, num2) {
-  a = 0;
-
   if (num1 === 0 || num2 === 0) {
-    return a;
+    return 0;
   }
+
+  let result = 0;
 
   while (num1 > 0 || num1 > 0) {
     num1 >= num2 ? (num1 -= num2) : (num2 -= num1);
-    a++;
+    result++;
   }
 
-  return a;
+  return result;
 };
