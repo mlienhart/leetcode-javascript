@@ -3,10 +3,10 @@
  * @return {number[]}
  */
 var countBits = function (n) {
-  let a = [];
+  const result = [];
 
   for (let i = 0; i <= n; i++) {
-    a.push(
+    result.push(
       i
         .toString(2)
         .split("")
@@ -14,5 +14,5 @@ var countBits = function (n) {
     );
   }
 
-  return a;
+  return result;
 };
