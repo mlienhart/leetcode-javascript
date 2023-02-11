@@ -4,11 +4,11 @@
  * @return {number[]}
  */
 var createTargetArray = function (nums, index) {
-  let a = [];
+  const result = [];
 
   for (let i = 0; i < nums.length; i++) {
-    a.splice(index[i], 0, nums[i]);
+    result.splice(index[i], 0, nums[i]);
   }
 
-  return a;
+  return result;
 };
