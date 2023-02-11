@@ -3,15 +3,10 @@
  * @return {boolean}
  */
 var squareIsWhite = function (coordinates) {
-  let a = coordinates.split("");
-  let b = ["a", "c", "e", "g"];
-
-  if (
-    (b.includes(a[0]) && a[1] % 2 !== 0) ||
-    (!b.includes(a[0]) && a[1] % 2 === 0)
-  ) {
-    return false;
-  }
-
-  return true;
+  return !(
+    (["a", "c", "e", "g"].includes(coordinates.split("")[0]) &&
+      coordinates.split("")[1] % 2 !== 0) ||
+    (!["a", "c", "e", "g"].includes(coordinates.split("")[0]) &&
+      coordinates.split("")[1] % 2 === 0)
+  );
 };
