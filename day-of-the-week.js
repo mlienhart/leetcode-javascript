@@ -5,8 +5,8 @@
  * @return {string}
  */
 var dayOfTheWeek = function (day, month, year) {
-  let a = new Date(year, month - 1, day).toString().substring(0, 3);
-  let b = {
+  const today = new Date(year, month - 1, day).toString().substring(0, 3);
+  const days = {
     Sun: "Sunday",
     Mon: "Monday",
     Tue: "Tuesday",
@@ -16,5 +16,5 @@ var dayOfTheWeek = function (day, month, year) {
     Sat: "Saturday",
   };
 
-  return b[a];
+  return days[today];
 };
