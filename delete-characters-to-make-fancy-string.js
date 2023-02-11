@@ -3,13 +3,13 @@
  * @return {string}
  */
 var makeFancyString = function (s) {
-  let a = s.split("");
+  let result = s.split("");
 
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] === a[i + 1] && a[i + 1] === a[i + 2]) {
-      a[i] = "";
+  for (let i = 0; i < result.length; i++) {
+    if (result[i] === result[i + 1] && result[i + 1] === result[i + 2]) {
+      result[i] = "";
     }
   }
 
-  return a.join("");
+  return result.join("");
 };
