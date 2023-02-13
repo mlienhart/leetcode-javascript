@@ -3,8 +3,7 @@
  * @return {number}
  */
 var distributeCandies = function (candyType) {
-  let a = candyType.length / 2;
-  let b = new Set(candyType).size;
-
-  return a > b ? b : a;
+  return candyType.length / 2 > new Set(candyType).size
+    ? new Set(candyType).size
+    : candyType.length / 2;
 };
