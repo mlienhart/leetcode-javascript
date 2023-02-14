@@ -3,11 +3,11 @@
  * @return {number}
  */
 var findSpecialInteger = function (arr) {
-  const result = {};
+  const counts = {};
 
-  arr.forEach((x) => (result[x] = result[x] ? result[x] + 1 : 1));
+  arr.forEach((x) => (counts[x] = counts[x] ? counts[x] + 1 : 1));
 
-  for (const [key, value] of Object.entries(result)) {
+  for (const [key, value] of Object.entries(counts)) {
     if (value > arr.length / 4) {
       return +key;
     }
