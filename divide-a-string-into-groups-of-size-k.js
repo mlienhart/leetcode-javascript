@@ -5,20 +5,18 @@
  * @return {string[]}
  */
 var divideString = function (s, k, fill) {
-  let a = s.split("");
-  let b = [];
+  const characterList = s.split("");
+  const result = [];
 
   for (let i = 0; i < s.length / k; i++) {
-    b.push(a.splice(0, k));
+    result.push(characterList.splice(0, k));
   }
 
-  let c = b.pop();
+  const lastResult = result.pop();
 
-  for (let i = c.length; i < k; i++) {
-    c.push(fill);
+  for (let i = lastResult.length; i < k; i++) {
+    lastResult.push(fill);
   }
 
-  let e = b.map((x) => x.join(""));
-
-  return [...e, c.join("")];
+  return [...result.map((x) => x.join("")), lastResult.join("")];
 };
