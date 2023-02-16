@@ -3,16 +3,16 @@
  * @return {number}
  */
 var heightChecker = function (heights) {
-  let a = [...heights];
-  let b = 0;
+  const originalHeights = [...heights];
+  let result = 0;
 
   heights.sort((a, b) => a - b);
 
   for (let i = 0; i < heights.length; i++) {
-    if (a[i] !== heights[i]) {
-      b++;
+    if (originalHeights[i] !== heights[i]) {
+      result++;
     }
   }
 
-  return b;
+  return result;
 };
