@@ -5,15 +5,15 @@
  * @return {number[]}
  */
 var findKDistantIndices = function (nums, key, k) {
-  let a = [];
+  const result = [];
 
   for (let i = 0; i < nums.length; i++) {
     for (let j = 0; j < nums.length; j++) {
       if (Math.abs(i - j) <= k && nums[j] === key) {
-        a.push(i);
+        result.push(i);
       }
     }
   }
 
-  return [...new Set(a)];
+  return [...new Set(result)];
 };
