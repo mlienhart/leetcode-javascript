@@ -3,8 +3,9 @@
  * @return {number[]}
  */
 var findLonely = function (nums) {
+  const result = [];
+
   nums.sort((a, b) => a - b);
-  let a = [];
 
   for (let i = 0; i < nums.length; i++) {
     if (
@@ -13,9 +14,9 @@ var findLonely = function (nums) {
       nums[i] !== nums[i - 1] + 1 &&
       nums[i] !== nums[i + 1] - 1
     ) {
-      a.push(nums[i]);
+      result.push(nums[i]);
     }
   }
 
-  return a;
+  return result;
 };
