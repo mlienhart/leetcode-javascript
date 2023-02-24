@@ -3,21 +3,14 @@
  * @return {number[]}
  */
 var findDisappearedNumbers = function (nums) {
-  let a = [...new Set([...nums].sort((a, b) => a - b))];
-  let b = [];
-  let c = [];
+  const uniqueValues = new Set(nums);
+  const result = [];
 
   for (let i = 1; i <= nums.length; i++) {
-    if (i !== a[i - 1]) {
-      b.push(i);
+    if (!uniqueValues.has(i)) {
+      result.push(i);
     }
   }
 
-  for (let i = 0; i < b.length; i++) {
-    if (!a.includes(b[i])) {
-      c.push(b[i]);
-    }
-  }
-
-  return c;
+  return result;
 };
