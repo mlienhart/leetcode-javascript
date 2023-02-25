@@ -3,15 +3,15 @@
  * @return {string[]}
  */
 var commonChars = function (words) {
-  let a = [];
-  let b = words[0].split("");
+  const result = [];
+  const firstWordCharacters = words[0].split("");
 
-  for (let i = 0; i < b.length; i++) {
-    if (words.every((x) => x.includes(b[i]))) {
-      a.push(b[i]);
-      words = words.map((x) => x.replace(b[i], ""));
+  for (let i = 0; i < firstWordCharacters.length; i++) {
+    if (words.every((x) => x.includes(firstWordCharacters[i]))) {
+      result.push(firstWordCharacters[i]);
+      words = words.map((x) => x.replace(firstWordCharacters[i], ""));
     }
   }
 
-  return a;
+  return result;
 };
