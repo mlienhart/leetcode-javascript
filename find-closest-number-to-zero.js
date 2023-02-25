@@ -3,13 +3,19 @@
  * @return {number}
  */
 var findClosestNumber = function (nums) {
-  let a = nums
-    .map((x, i) => ({ b: nums[i], c: Math.abs(nums[i]) }))
-    .sort((a, b) => (a.c > b.c ? 1 : -1));
+  const result = nums
+    .map((x, i) => ({
+      originalValue: nums[i],
+      positiveValue: Math.abs(nums[i]),
+    }))
+    .sort((a, b) => (a.positiveValue > b.positiveValue ? 1 : -1));
 
-  if (a[0]?.c === a[1]?.c && a[0]?.b < a[1]?.b) {
-    return a[1].b;
+  if (
+    result[0]?.positiveValue === result[1]?.positiveValue &&
+    result[0]?.originalValue < result[1]?.originalValue
+  ) {
+    return result[1].originalValue;
   } else {
-    return a[0].b;
+    return result[0].originalValue;
   }
 };
