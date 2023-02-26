@@ -3,9 +3,9 @@
  * @return {number[]}
  */
 var findArray = function (pref) {
-  const a = [];
+  const result = [];
 
-  pref.forEach((x, i) => a.push(pref[i] ^ pref[i - 1]));
+  pref.forEach((x, i) => result.push(pref[i] ^ pref[i - 1]));
 
-  return a;
+  return result;
 };
