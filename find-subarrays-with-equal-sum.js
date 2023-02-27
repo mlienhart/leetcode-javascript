@@ -3,13 +3,13 @@
  * @return {boolean}
  */
 var findSubarrays = function (nums) {
-  const a = new Set();
+  const set = new Set();
 
   for (let i = 0; i < nums.length; i++) {
-    if (a.has(nums[i] + nums[i + 1])) {
+    if (set.has(nums[i] + nums[i + 1])) {
       return true;
     }
-    a.add(nums[i] + nums[i + 1]);
+    set.add(nums[i] + nums[i + 1]);
   }
 
   return false;
