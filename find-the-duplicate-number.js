@@ -3,11 +3,11 @@
  * @return {number}
  */
 var findDuplicate = function (nums) {
-  let a = nums.sort((a, b) => a - b);
+  nums.sort((a, b) => a - b);
 
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] === a[i + 1]) {
-      return a[i];
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === nums[i + 1]) {
+      return nums[i];
     }
   }
 };
