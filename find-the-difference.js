@@ -4,20 +4,21 @@
  * @return {character}
  */
 var findTheDifference = function (s, t) {
-  let a = s.split("");
-  let b = t.split("");
-  let c = [];
-  let d = [];
+  const firstCharacterList = s.split("");
+  const secondCharacterList = t.split("");
+  const firstResult = [];
+  const secondResult = [];
 
   for (let i = 0; i < s.length; i++) {
-    c.push(a[i].charCodeAt());
+    firstResult.push(firstCharacterList[i].charCodeAt());
   }
 
   for (let i = 0; i < t.length; i++) {
-    d.push(b[i].charCodeAt());
+    secondResult.push(secondCharacterList[i].charCodeAt());
   }
 
   return String.fromCharCode(
-    d.reduce((a, b) => a + b, 0) - c.reduce((a, b) => a + b, 0)
+    secondResult.reduce((a, b) => a + b, 0) -
+      firstResult.reduce((a, b) => a + b, 0)
   );
 };
