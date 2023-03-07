@@ -4,10 +4,10 @@
  */
 var findMiddleIndex = function (nums) {
   for (let i = 0; i < nums.length; i++) {
-    let firstPart = nums.slice(0, i).reduce((a, b) => a + b, 0);
-    let secondPart = nums.slice(i + 1).reduce((a, b) => a + b, 0);
-
-    if (firstPart === secondPart) {
+    if (
+      nums.slice(0, i).reduce((a, b) => a + b, 0) ===
+      nums.slice(i + 1).reduce((a, b) => a + b, 0)
+    ) {
       return i;
     }
   }
