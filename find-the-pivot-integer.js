@@ -3,16 +3,16 @@
  * @return {number}
  */
 var pivotInteger = function (n) {
-  let a = [];
+  const result = [];
 
   for (let i = 1; i <= n; i++) {
-    a.push(i);
+    result.push(i);
   }
 
-  for (let i = 0; i < a.length; i++) {
+  for (let i = 0; i < result.length; i++) {
     if (
-      a.slice(0, i).reduce((a, b) => a + b, 0) ===
-      a.slice(i - 1).reduce((a, b) => a + b, 0)
+      result.slice(0, i).reduce((a, b) => a + b, 0) ===
+      result.slice(i - 1).reduce((a, b) => a + b, 0)
     ) {
       return i;
     }
