@@ -4,13 +4,11 @@
  */
 var triangularSum = function (nums) {
   while (nums.length !== 1) {
-    let a = [];
-
+    const result = [];
     for (let i = 0; i < nums.length - 1; i++) {
-      a.push((nums[i] + nums[i + 1]) % 10);
+      result.push((nums[i] + nums[i + 1]) % 10);
     }
-
-    nums = a;
+    nums = result;
   }
 
   return nums[0];
