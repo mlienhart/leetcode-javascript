@@ -3,11 +3,11 @@
  * @return {string}
  */
 var findDifferentBinaryString = function (nums) {
-  let a = "";
+  let result = "";
 
   for (let i = 0; i < nums.length; i++) {
-    a = nums[i][i] === "0" ? a + "1" : a + "0";
+    result = nums[i][i] === "0" ? result + "1" : result + "0";
   }
 
-  return a;
+  return result;
 };
