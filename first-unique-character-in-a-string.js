@@ -3,7 +3,7 @@
  * @return {number}
  */
 var firstUniqChar = function (s) {
-  let map = new Map();
+  const map = new Map();
 
   for (let i = 0; i < s.length; i++) {
     map.set(s[i], (map.get(s[i]) || 0) + 1);
