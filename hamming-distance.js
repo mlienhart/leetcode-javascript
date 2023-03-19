@@ -4,23 +4,23 @@
  * @return {number}
  */
 var hammingDistance = function (x, y) {
-  let a = x.toString(2);
-  let b = y.toString(2);
-  let c = 0;
+  let firstValue = x.toString(2);
+  let secondValue = y.toString(2);
+  let result = 0;
 
-  if (a.length < b.length) {
-    a = a.padStart(b.length, "0");
+  if (firstValue.length < secondValue.length) {
+    firstValue = firstValue.padStart(secondValue.length, "0");
   }
 
-  if (a.length > b.length) {
-    b = b.padStart(a.length, "0");
+  if (firstValue.length > secondValue.length) {
+    secondValue = secondValue.padStart(firstValue.length, "0");
   }
 
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] !== b[i]) {
-      c++;
+  for (let i = 0; i < firstValue.length; i++) {
+    if (firstValue[i] !== secondValue[i]) {
+      result++;
     }
   }
 
-  return c;
+  return result;
 };
