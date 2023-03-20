@@ -3,20 +3,20 @@
  * @return {number[]}
  */
 var smallerNumbersThanCurrent = function (nums) {
-  let a = [];
-  let b = 0;
+  const result = [];
+  let increment = 0;
 
   for (let i = 0; i < nums.length; i++) {
     for (let j = 0; j < nums.length; j++) {
       if (nums[i] > nums[j]) {
-        b++;
+        increment++;
       }
       if (j === nums.length - 1) {
-        a.push(b);
-        b = 0;
+        result.push(increment);
+        increment = 0;
       }
     }
   }
 
-  return a;
+  return result;
 };
