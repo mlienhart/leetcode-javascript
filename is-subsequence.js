@@ -4,14 +4,13 @@
  * @return {boolean}
  */
 var isSubsequence = function (s, t) {
-  let a = s.split("");
-  let b = 0;
+  let result = 0;
 
   for (let i = 0; i < t.length; i++) {
-    if (a[b] === t[i]) {
-      b++;
+    if (s[result] === t[i]) {
+      result++;
     }
   }
 
-  return b === s.length;
+  return result === s.length;
 };
