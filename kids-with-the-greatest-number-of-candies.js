@@ -4,16 +4,13 @@
  * @return {boolean[]}
  */
 var kidsWithCandies = function (candies, extraCandies) {
-  let a = Math.max(...candies);
-  let b = [];
+  const result = [];
 
   for (let i = 0; i < candies.length; i++) {
-    if (candies[i] + extraCandies >= a) {
-      b.push(true);
-    } else {
-      b.push(false);
-    }
+    candies[i] + extraCandies >= Math.max(...candies)
+      ? result.push(true)
+      : result.push(false);
   }
 
-  return b;
+  return result;
 };
