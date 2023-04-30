@@ -11,7 +11,7 @@ var kthDistinct = function (arr, k) {
     map.set(arr[i], (map.get(arr[i]) || 0) + 1);
   }
 
-  for (let [key, value] of map.entries()) {
+  for (const [key, value] of map.entries()) {
     if (value === 1) {
       result.push(key);
     }
