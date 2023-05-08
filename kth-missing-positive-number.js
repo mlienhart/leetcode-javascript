@@ -4,13 +4,13 @@
  * @return {number}
  */
 var findKthPositive = function (arr, k) {
-  let a = [];
+  const result = [];
 
   for (let i = 1; i <= arr.length + k; i++) {
     if (!arr.includes(i)) {
-      a.push(i);
+      result.push(i);
     }
   }
 
-  return a[k - 1];
+  return result[k - 1];
 };
