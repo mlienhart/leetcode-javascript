@@ -3,14 +3,14 @@
  * @return {number}
  */
 var findMaxK = function (nums) {
-  let a = -1;
+  let result = -1;
 
-  for (const b of nums) {
-    let c = nums.find((x) => x === -b);
-    if (c > a) {
-      a = c;
+  for (const number of nums) {
+    const negativeNumber = nums.find((x) => x === -number);
+    if (negativeNumber > result) {
+      result = negativeNumber;
     }
   }
 
-  return a;
+  return result;
 };
