@@ -3,16 +3,16 @@
  * @return {number[]}
  */
 var majorityElement = function (nums) {
-  let a = new Map();
-  let b = [];
+  const map = new Map();
+  const result = [];
 
   for (let i = 0; i < nums.length; i++) {
-    a.set(nums[i], (a.get(nums[i]) || 0) + 1);
+    map.set(nums[i], (map.get(nums[i]) || 0) + 1);
   }
 
-  for (let [key, value] of a.entries()) {
-    b.push({ key: key, value: value });
+  for (const [key, value] of map.entries()) {
+    result.push({ key: key, value: value });
   }
 
-  return b.filter((x) => x.value > nums.length / 3).map((x) => x.key);
+  return result.filter((x) => x.value > nums.length / 3).map((x) => x.key);
 };
