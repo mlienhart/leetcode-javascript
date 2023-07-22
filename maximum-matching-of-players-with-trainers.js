@@ -6,13 +6,14 @@
 var matchPlayersAndTrainers = function (players, trainers) {
   players.sort((a, b) => a - b);
   trainers.sort((a, b) => a - b);
-  let a = 0;
+
+  let result = 0;
 
   for (let i = 0; i < trainers.length; i++) {
-    if (players[a] <= trainers[i]) {
-      a++;
+    if (players[result] <= trainers[i]) {
+      result++;
     }
   }
 
-  return a;
+  return result;
 };
