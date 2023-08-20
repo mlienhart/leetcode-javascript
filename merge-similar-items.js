@@ -6,8 +6,8 @@
 var mergeSimilarItems = function (items1, items2) {
   const result = {};
 
-  for (const [b, c] of [...items1, ...items2]) {
-    result[b] = result[b] ? result[b] + c : c;
+  for (const [key, value] of [...items1, ...items2]) {
+    result[key] = result[key] ? result[key] + value : value;
   }
 
   return Object.entries(result);
