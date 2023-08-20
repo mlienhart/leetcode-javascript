@@ -4,11 +4,11 @@
  * @return {number[][]}
  */
 var mergeSimilarItems = function (items1, items2) {
-  let a = {};
+  const result = {};
 
   for (const [b, c] of [...items1, ...items2]) {
-    a[b] = a[b] ? a[b] + c : c;
+    result[b] = result[b] ? result[b] + c : c;
   }
 
-  return Object.entries(a);
+  return Object.entries(result);
 };
