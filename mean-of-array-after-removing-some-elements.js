@@ -3,16 +3,14 @@
  * @return {number}
  */
 var trimMean = function (arr) {
-  let a = arr.length * 0.05;
+  let result = arr.length * 0.05;
 
   arr.sort((a, b) => a - b);
 
-  for (let i = 0; i < a; i++) {
+  for (let i = 0; i < result; i++) {
     arr.shift();
     arr.pop();
   }
 
-  let b = arr.reduce((a, b) => a + b, 0) / arr.length;
-
-  return parseFloat(b.toFixed(5));
+  return parseFloat(arr.reduce((a, b) => a + b, 0) / arr.length.toFixed(5));
 };
