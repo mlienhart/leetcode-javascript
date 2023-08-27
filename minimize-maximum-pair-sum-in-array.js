@@ -4,11 +4,11 @@
  */
 var minPairSum = function (nums) {
   nums.sort((a, b) => a - b);
-  let a = 0;
+  let result = 0;
 
   for (let i = 0; i < nums.length / 2; i++) {
-    a = Math.max(a, nums[i] + nums[nums.length - i - 1]);
+    result = Math.max(result, nums[i] + nums[nums.length - i - 1]);
   }
 
-  return a;
+  return result;
 };
