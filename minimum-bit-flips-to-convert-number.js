@@ -4,23 +4,23 @@
  * @return {number}
  */
 var minBitFlips = function (start, goal) {
-  let a = start.toString(2);
-  let b = goal.toString(2);
-  let c = 0;
+  let binaryStart = start.toString(2);
+  let binaryGoal = goal.toString(2);
+  let result = 0;
 
-  if (a.length > b.length) {
-    b = b.padStart(a.length, "0");
+  if (binaryStart.length > binaryGoal.length) {
+    binaryGoal = binaryGoal.padStart(binaryStart.length, "0");
   }
 
-  if (a.length < b.length) {
-    a = a.padStart(b.length, "0");
+  if (binaryStart.length < binaryGoal.length) {
+    binaryStart = binaryStart.padStart(binaryGoal.length, "0");
   }
 
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] !== b[i]) {
-      c++;
+  for (let i = 0; i < binaryStart.length; i++) {
+    if (binaryStart[i] !== binaryGoal[i]) {
+      result++;
     }
   }
 
-  return c;
+  return result;
 };
