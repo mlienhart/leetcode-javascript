@@ -3,15 +3,14 @@
  * @return {number}
  */
 var minimumMoves = function (s) {
-  let a = s.split("");
-  let b = 0;
+  let result = 0;
 
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] === "X") {
-      b++;
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === "X") {
+      result++;
       i = i + 2;
     }
   }
 
-  return b;
+  return result;
 };
