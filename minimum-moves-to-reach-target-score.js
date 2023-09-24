@@ -8,18 +8,18 @@ var minMoves = function (target, maxDoubles) {
     return target - 1;
   }
 
-  let a = 0;
+  let result = 0;
 
   while (target > 1) {
     if (target % 2 === 0 && maxDoubles > 0) {
       target /= 2;
       maxDoubles--;
-      a++;
+      result++;
     } else {
       target--;
-      a++;
+      result++;
     }
   }
 
-  return a;
+  return result;
 };
