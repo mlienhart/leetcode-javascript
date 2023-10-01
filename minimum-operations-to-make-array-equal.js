@@ -3,11 +3,11 @@
  * @return {number}
  */
 var minOperations = function (n) {
-  let a = 0;
+  let result = 0;
 
   for (let i = 0; i < n / 2; i++) {
-    a = a + n - (2 * i + 1);
+    result = result + n - (2 * i + 1);
   }
 
-  return a;
+  return result;
 };
