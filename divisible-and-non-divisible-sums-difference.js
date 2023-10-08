@@ -4,12 +4,11 @@
  * @return {number}
  */
 var differenceOfSums = function (n, m) {
-  let firstResult = 0;
-  let secondResult = 0;
+  let result = 0;
 
   for (let i = 1; i <= n; i++) {
-    i % m !== 0 ? (firstResult += i) : (secondResult += i);
+    i % m !== 0 ? (result += i) : (result -= i);
   }
 
-  return firstResult - secondResult;
+  return result;
 };
