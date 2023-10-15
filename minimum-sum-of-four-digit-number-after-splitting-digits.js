@@ -3,6 +3,7 @@
  * @return {number}
  */
 var minimumSum = function (num) {
-  let a = `${num}`.split("").sort((a, b) => a - b);
-  return +(a[0] + a[2]) + +(a[1] + +a[3]);
+  const result = `${num}`.split("").sort((a, b) => a - b);
+
+  return +(result[0] + result[2]) + +(result[1] + +result[3]);
 };
