@@ -3,20 +3,17 @@
  * @return {boolean}
  */
 var isMonotonic = function (nums) {
-  let a = 0;
-  let b = 0;
+  let firstResult = 0;
+  let secondResult = 0;
 
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] >= nums[i + 1]) {
-      a++;
+      firstResult++;
     }
-  }
-
-  for (let i = 0; i < nums.length; i++) {
     if (nums[i] <= nums[i + 1]) {
-      b++;
+      secondResult++;
     }
   }
 
-  return a === nums.length - 1 || b === nums.length - 1;
+  return firstResult === nums.length - 1 || secondResult === nums.length - 1;
 };
