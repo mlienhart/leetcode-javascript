@@ -5,13 +5,13 @@
  * @return {number}
  */
 var busyStudent = function (startTime, endTime, queryTime) {
-  let a = 0;
+  let result = 0;
 
   for (let i = 0; i < startTime.length; i++) {
     if (startTime[i] <= queryTime && endTime[i] >= queryTime) {
-      a++;
+      result++;
     }
   }
 
-  return a;
+  return result;
 };
