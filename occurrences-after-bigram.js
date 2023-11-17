@@ -5,14 +5,14 @@
  * @return {string[]}
  */
 var findOcurrences = function (text, first, second) {
-  let a = text.split(" ");
-  let b = [];
+  const words = text.split(" ");
+  const result = [];
 
-  for (let i = 0; i < a.length - 2; i++) {
-    if (a[i] === first && a[i + 1] === second) {
-      b.push(a[i + 2]);
+  for (let i = 0; i < words.length - 2; i++) {
+    if (words[i] === first && words[i + 1] === second) {
+      result.push(words[i + 2]);
     }
   }
 
-  return b;
+  return result;
 };
