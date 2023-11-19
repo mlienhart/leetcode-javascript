@@ -3,16 +3,16 @@
  * @return {number}
  */
 var partitionString = function (s) {
-  let a = new Set();
-  let b = 1;
+  let set = new Set();
+  let result = 1;
 
-  for (const c of s) {
-    if (a.has(c)) {
-      a = new Set();
-      b++;
+  for (const character of s) {
+    if (set.has(character)) {
+      set = new Set();
+      result++;
     }
-    a.add(c);
+    set.add(character);
   }
 
-  return b;
+  return result;
 };
