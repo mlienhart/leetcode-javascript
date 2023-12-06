@@ -3,13 +3,13 @@
  * @return {number[]}
  */
 var rearrangeArray = function (nums) {
-  let a = nums.filter((x) => x > 0);
-  let b = nums.filter((x) => x < 0);
-  let c = [];
+  const positiveNumbers = nums.filter((x) => x > 0);
+  const negativeNumbers = nums.filter((x) => x < 0);
+  const result = [];
 
   for (let i = 0; i < nums.length / 2; i++) {
-    c.push(a[i], b[i]);
+    result.push(positiveNumbers[i], negativeNumbers[i]);
   }
 
-  return c;
+  return result;
 };
