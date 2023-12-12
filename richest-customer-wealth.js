@@ -3,14 +3,5 @@
  * @return {number}
  */
 var maximumWealth = function (accounts) {
-  let a = 0;
-
-  for (let i = 0; i < accounts.length; i++) {
-    let b = accounts[i].reduce((a, b) => a + b, 0);
-    if (b > a) {
-      a = b;
-    }
-  }
-
-  return a;
+  return Math.max(...accounts.map((x) => x.reduce((a, b) => a + b)));
 };
