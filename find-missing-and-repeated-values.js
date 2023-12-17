@@ -13,18 +13,26 @@ var findMissingAndRepeatedValues = function (grid) {
     }
   }
 
+  if (valuesListWithoutDuplicate[0] !== 1) {
+    result[1] = 1;
+    return result;
+  }
+
+  if (
+    valuesListWithoutDuplicate[valuesListWithoutDuplicate.length - 1] !==
+    valuesListWithDuplicate.length
+  ) {
+    result[1] = valuesListWithDuplicate.length;
+    return result;
+  }
+
   for (let i = 0; i < valuesListWithoutDuplicate.length; i++) {
-    if (valuesListWithoutDuplicate[0] !== 1) {
-      result[1] = 1;
-    }
     if (
       valuesListWithoutDuplicate[i] + 2 ===
       valuesListWithoutDuplicate[i + 1]
     ) {
       result[1] = valuesListWithoutDuplicate[i] + 1;
-    }
-    if (i === valuesListWithoutDuplicate.length - 1 && !result[1]) {
-      result[1] = valuesListWithoutDuplicate.length + 1;
+      return result;
     }
   }
 
