@@ -3,11 +3,13 @@
  * @return {string}
  */
 var removeDuplicates = function (s) {
-  let a = [];
+  const result = [];
 
-  for (let x of s) {
-    a[a.length - 1] === x ? a.pop() : a.push(x);
+  for (const character of s) {
+    result[result.length - 1] === character
+      ? result.pop()
+      : result.push(character);
   }
 
-  return a.join("");
+  return result.join("");
 };
