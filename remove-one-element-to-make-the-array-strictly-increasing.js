@@ -3,14 +3,17 @@
  * @return {boolean}
  */
 var canBeIncreasing = function (nums) {
-  let a = [];
+  const result = [];
 
   for (let i = 0; i < nums.length; i++) {
-    a.push([...nums.slice(0, i), ...nums.slice(i + 1)]);
+    result.push([...nums.slice(0, i), ...nums.slice(i + 1)]);
   }
 
-  for (let i = 0; i < a.length; i++) {
-    if ([...new Set(a[i])].sort((a, b) => a - b).join("") === a[i].join("")) {
+  for (let i = 0; i < result.length; i++) {
+    if (
+      [...new Set(result[i])].sort((a, b) => a - b).join("") ===
+      result[i].join("")
+    ) {
       return true;
     }
   }
