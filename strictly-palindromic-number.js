@@ -4,10 +4,7 @@
  */
 var isStrictlyPalindromic = function (n) {
   for (let i = 2; i <= n - 2; i++) {
-    let a = n.toString(i);
-    let b = a.split("").reverse().join("");
-
-    if (a !== b) {
+    if (n.toString(i) !== n.toString(i).split("").reverse().join("")) {
       return false;
     }
   }
