@@ -3,7 +3,7 @@
  * @return {number}
  */
 var arraySign = function (nums) {
-  let a = Math.sign(nums.reduce((a, b) => a * b));
+  const result = Math.sign(nums.reduce((a, b) => a * b));
 
-  return a > 0 ? 1 : a < 0 && a !== -0 ? -1 : 0;
+  return result > 0 ? 1 : result < 0 && result !== -0 ? -1 : 0;
 };
