@@ -3,10 +3,10 @@
  * @return {string}
  */
 var sortSentence = function (s) {
-  let a = s.split(" ");
-  let b = a.map((x) => x.split("").reverse().join("")).sort();
-
-  return b
+  return s
+    .split(" ")
+    .map((x) => x.split("").reverse().join(""))
+    .sort()
     .map((x) => x.split("").reverse().join(""))
     .join(" ")
     .replace(/[0-9]/g, "");
