@@ -5,16 +5,16 @@
  * @return {number[][]}
  */
 var matrixReshape = function (mat, r, c) {
-  let a = [];
-  let b = mat.flat();
+  const result = [];
+  const flattenedMatrix = mat.flat();
 
-  if (r * c !== b.length) {
+  if (r * c !== flattenedMatrix.length) {
     return mat;
   }
 
   for (let i = 0; i < r; i++) {
-    a.push(b.splice(0, c));
+    result.push(flattenedMatrix.splice(0, c));
   }
 
-  return a;
+  return result;
 };
