@@ -3,7 +3,7 @@
  * @return {number}
  */
 var uniqueMorseRepresentations = function (words) {
-  const a = {
+  const morseCode = {
     a: ".-",
     b: "-...",
     c: "-.-.",
@@ -36,7 +36,7 @@ var uniqueMorseRepresentations = function (words) {
     words.map((x) =>
       x
         .split("")
-        .map((x) => a[x])
+        .map((x) => morseCode[x])
         .join("")
     )
   ).size;
