@@ -3,15 +3,15 @@
  * @return {string}
  */
 var thousandSeparator = function (n) {
-  let a = `${n}`.split("").reverse().join("");
-  let b = [];
+  const reversedValue = `${n}`.split("").reverse().join("");
+  const result = [];
 
-  for (let i = 0; i < a.length; i++) {
+  for (let i = 0; i < reversedValue.length; i++) {
     if (i % 3 === 0 && i > 0) {
-      b.push(".");
+      result.push(".");
     }
-    b.push(a[i]);
+    result.push(reversedValue[i]);
   }
 
-  return b.reverse().join("");
+  return result.reverse().join("");
 };
