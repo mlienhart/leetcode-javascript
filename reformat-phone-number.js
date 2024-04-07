@@ -3,19 +3,19 @@
  * @return {string}
  */
 var reformatNumber = function (number) {
-  let a = number.split("-").join("").split(" ").join("").split("");
-  let b = [];
+  const numbers = number.split("-").join("").split(" ").join("").split("");
+  const result = [];
 
-  while (a.length > 4) {
-    b.push(a.splice(0, 3));
+  while (numbers.length > 4) {
+    result.push(numbers.splice(0, 3));
   }
 
-  if (a.length === 4) {
-    b.push(a.splice(0, 2));
-    b.push(a);
+  if (numbers.length === 4) {
+    result.push(numbers.splice(0, 2));
+    result.push(numbers);
   } else {
-    b.push(a);
+    result.push(numbers);
   }
 
-  return b.join("-").split(",").join("");
+  return result.join("-").split(",").join("");
 };
