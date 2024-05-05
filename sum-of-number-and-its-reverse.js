@@ -8,8 +8,7 @@ var sumOfNumberAndReverse = function (num) {
   }
 
   for (let i = 0; i < num; i++) {
-    let a = +i.toString().split("").reverse().join("");
-    if (i + a === num) {
+    if (i + +i.toString().split("").reverse().join("") === num) {
       return true;
     }
   }
