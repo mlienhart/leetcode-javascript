@@ -4,5 +4,5 @@
  * @return {number}
  */
 var addedInteger = function (nums1, nums2) {
-  return nums2.sort((a, b) => a - b)[0] - nums1.sort((a, b) => a - b)[0];
+  return Math.min(...nums2) - Math.min(...nums1);
 };
