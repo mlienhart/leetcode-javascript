@@ -3,18 +3,14 @@
  * @return {number[]}
  */
 var sortArrayByParityII = function (nums) {
-  let a = [];
-  let b = [];
-  let c = [];
+  const evenNumbers = nums.filter((x) => x % 2 === 0);
+  const oddNumbers = nums.filter((x) => x % 2 !== 0);
+  const result = [];
 
-  for (let i = 0; i < nums.length; i++) {
-    nums[i] % 2 === 0 ? a.push(nums[i]) : b.push(nums[i]);
+  for (let i = 0; i < nums.length / 2; i++) {
+    result.push(evenNumbers[i]);
+    result.push(oddNumbers[i]);
   }
 
-  for (let i = 0; i < a.length; i++) {
-    c.push(a[i]);
-    c.push(b[i]);
-  }
-
-  return c;
+  return result;
 };
