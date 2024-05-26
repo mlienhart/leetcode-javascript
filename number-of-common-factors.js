@@ -4,14 +4,13 @@
  * @return {number}
  */
 var commonFactors = function (a, b) {
-  let x = a < b ? a : b;
-  let y = 0;
+  let result = 0;
 
-  for (let i = 1; i <= x; i++) {
+  for (let i = 1; i <= Math.min(a, b); i++) {
     if (a % i === 0 && b % i === 0) {
-      y++;
+      result++;
     }
   }
 
-  return y;
+  return result;
 };
