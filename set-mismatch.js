@@ -4,26 +4,26 @@
  */
 var findErrorNums = function (nums) {
   nums.sort((a, b) => a - b);
-  let a = [];
-  let b = [...new Set([...nums])];
+  const result = [];
+  const uniqueValuesList = [...new Set([...nums])];
 
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] === nums[i + 1]) {
-      a.push(nums[i]);
+      result.push(nums[i]);
     }
   }
 
-  if (b[0] !== 1) {
-    a.push(1);
-    return a;
+  if (uniqueValuesList[0] !== 1) {
+    result.push(1);
+    return result;
   }
 
-  for (let i = 0; i < b.length; i++) {
-    if (b[i] + 1 !== b[i + 1]) {
-      a.push(b[i] + 1);
-      return a;
+  for (let i = 0; i < uniqueValuesList.length; i++) {
+    if (uniqueValuesList[i] + 1 !== uniqueValuesList[i + 1]) {
+      result.push(uniqueValuesList[i] + 1);
+      return result;
     }
   }
 
-  return a;
+  return result;
 };
