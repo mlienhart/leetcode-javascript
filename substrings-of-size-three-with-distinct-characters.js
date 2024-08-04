@@ -3,19 +3,18 @@
  * @return {number}
  */
 var countGoodSubstrings = function (s) {
-  let a = s.split("");
-  let b = [];
-  let c = 0;
+  const substringsList = [];
+  let result = 0;
 
-  for (let i = 0; i < a.length - 2; i++) {
-    b.push(a[i] + a[i + 1] + a[i + 2]);
+  for (let i = 0; i < s.length - 2; i++) {
+    substringsList.push(s[i] + s[i + 1] + s[i + 2]);
   }
 
-  for (let i = 0; i < b.length; i++) {
-    if ([...new Set(b[i].split(""))].length === 3) {
-      c++;
+  for (let i = 0; i < substringsList.length; i++) {
+    if (new Set(substringsList[i]).size === 3) {
+      result++;
     }
   }
 
-  return c;
+  return result;
 };
