@@ -3,17 +3,15 @@
  * @return {number}
  */
 var sumOddLengthSubarrays = function (arr) {
-  let a = [];
+  const result = [];
 
-  for (let i = 0; i <= arr.length; i++) {
-    for (let j = 0; j <= arr.length; j++) {
-      let b = arr.slice(i, j);
-      let c = b.reduce((a, b) => a + b, 0);
-      if (b.length % 2 !== 0) {
-        a.push(c);
+  for (let i = 0; i <= arr.length - 1; i++) {
+    for (let j = i + 1; j <= arr.length; j++) {
+      if (arr.slice(i, j).length % 2 !== 0) {
+        result.push(arr.slice(i, j).reduce((a, b) => a + b));
       }
     }
   }
 
-  return a.reduce((a, b) => a + b, 0);
+  return result.reduce((a, b) => a + b);
 };
