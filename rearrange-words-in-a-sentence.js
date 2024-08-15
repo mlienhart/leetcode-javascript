@@ -3,14 +3,11 @@
  * @return {string}
  */
 var arrangeWords = function (text) {
-  let a = text
+  const sortedList = text
     .toLowerCase()
     .split(" ")
     .sort((a, b) => a.length - b.length);
-  let b = a.slice(0, 1)[0].charAt(0).toUpperCase() + a.slice(0, 1)[0].slice(1);
+  const firstWord = sortedList[0][0].toUpperCase() + sortedList[0].slice(1);
 
-  a.shift();
-  a.unshift(b);
-
-  return a.join(" ");
+  return firstWord + " " + sortedList.slice(1).join(" ");
 };
