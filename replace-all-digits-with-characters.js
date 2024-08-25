@@ -3,13 +3,13 @@
  * @return {string}
  */
 var replaceDigits = function (s) {
-  let a = s.split("");
+  let result = s.split("");
 
-  for (let i = 0; i < a.length; i++) {
+  for (let i = 0; i < result.length; i++) {
     if (i % 2 !== 0) {
-      a[i] = String.fromCharCode(a[i - 1].charCodeAt() + +a[i]);
+      result[i] = String.fromCharCode(result[i - 1].charCodeAt() + +result[i]);
     }
   }
 
-  return a.join("");
+  return result.join("");
 };
