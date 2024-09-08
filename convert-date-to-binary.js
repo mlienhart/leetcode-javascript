@@ -3,11 +3,8 @@
  * @return {string}
  */
 var convertDateToBinary = function (date) {
-  return (
-    (+date.split("-")[0]).toString(2) +
-    "-" +
-    (+date.split("-")[1]).toString(2) +
-    "-" +
-    (+date.split("-")[2]).toString(2)
-  );
+  return date
+    .split("-")
+    .map((x) => (+x).toString(2))
+    .join("-");
 };
