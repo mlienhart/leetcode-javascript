@@ -3,14 +3,12 @@
  * @return {boolean}
  */
 var isBalanced = function (num) {
-  return (
-    num
-      .split("")
-      .filter((x, i) => i % 2 === 0)
-      .reduce((a, b) => +a + +b) ===
-    num
-      .split("")
-      .filter((x, i) => i % 2 !== 0)
-      .reduce((a, b) => +a + +b)
-  );
+  let sumOfEvenValues = 0;
+  let sumOfOddValues = 0;
+
+  for (let i = 0; i < num.length; i++) {
+    i % 2 === 0 ? (sumOfEvenValues += +num[i]) : (sumOfOddValues += +num[i]);
+  }
+
+  return sumOfEvenValues === sumOfOddValues;
 };
