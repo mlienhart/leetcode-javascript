@@ -3,18 +3,18 @@
  * @return {number}
  */
 var sumOfUnique = function (nums) {
-  let a = new Map();
-  let b = [];
+  const elementFrequencies = new Map();
+  const result = [];
 
   for (let i = 0; i < nums.length; i++) {
-    a.set(nums[i], (a.get(nums[i]) || 0) + 1);
+    elementFrequencies.set(nums[i], (elementFrequencies.get(nums[i]) || 0) + 1);
   }
 
   for (let i = 0; i < nums.length; i++) {
-    if (a.get(nums[i]) === 1) {
-      b.push(nums[i]);
+    if (elementFrequencies.get(nums[i]) === 1) {
+      result.push(nums[i]);
     }
   }
 
-  return b.reduce((a, b) => a + b, 0);
+  return result.reduce((a, b) => a + b, 0);
 };
