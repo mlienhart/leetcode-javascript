@@ -3,7 +3,7 @@
  * @return {string}
  */
 var frequencySort = function (s) {
-  let characterFrequencies = {};
+  const characterFrequencies = {};
 
   for (const character of s) {
     characterFrequencies[character] = characterFrequencies[character]
