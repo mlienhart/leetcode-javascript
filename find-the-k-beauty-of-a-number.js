@@ -4,15 +4,17 @@
  * @return {number}
  */
 var divisorSubstrings = function (num, k) {
-  let a = 0;
-  let b = num.toString();
+  let result = 0;
+  const numberAsString = num.toString();
 
-  for (let i = 0; i < b.length; i++) {
-    let c = b.slice(i, i + k);
-    if (num % +c === 0 && c.length === k) {
-      a++;
+  for (let i = 0; i < numberAsString.length; i++) {
+    if (
+      num % +numberAsString.slice(i, i + k) === 0 &&
+      numberAsString.slice(i, i + k).length === k
+    ) {
+      result++;
     }
   }
 
-  return a;
+  return result;
 };
