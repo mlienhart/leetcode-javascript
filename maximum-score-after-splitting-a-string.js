@@ -3,14 +3,20 @@
  * @return {number}
  */
 var maxScore = function (s) {
-  let a = s.split("");
-  let b = [];
+  const result = [];
 
-  for (let i = 1; i < a.length; i++) {
-    let x = a.slice(0, i).filter((x) => x === "0").length;
-    let y = a.slice(i).filter((x) => x === "1").length;
-    b.push(x + y);
+  for (let i = 1; i < s.length; i++) {
+    result.push(
+      s
+        .split("")
+        .slice(0, i)
+        .filter((x) => x === "0").length +
+        s
+          .split("")
+          .slice(i)
+          .filter((x) => x === "1").length
+    );
   }
 
-  return Math.max(...b);
+  return Math.max(...result);
 };
