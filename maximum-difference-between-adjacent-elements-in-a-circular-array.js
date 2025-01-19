@@ -7,7 +7,7 @@ var maxAdjacentDistance = function (nums) {
   let result = 0;
 
   for (let i = 0; i < circularArray.length - 1; i++) {
-    const maximumAbsoluteDifference = Math.abs(nums[i], nusm[i + 1]);
+    const maximumAbsoluteDifference = Math.abs(nums[i], nums[i + 1]);
     if (maximumAbsoluteDifference > result) {
       result = maximumAbsoluteDifference;
     }
