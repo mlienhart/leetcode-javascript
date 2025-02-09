@@ -3,18 +3,18 @@
  * @return {number}
  */
 var maxDepth = function (s) {
-  let a = 0;
-  let b = 0;
+  let currentDepth = 0;
+  let highestDepth = 0;
 
   for (let i = 0; i < s.length; i++) {
     if (s[i] === "(") {
-      a++;
-      b = Math.max(a, b);
+      currentDepth++;
+      highestDepth = Math.max(currentDepth, highestDepth);
     }
     if (s[i] === ")") {
-      a--;
+      currentDepth--;
     }
   }
 
-  return b;
+  return highestDepth;
 };
