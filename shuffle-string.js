@@ -4,14 +4,14 @@
  * @return {string}
  */
 var restoreString = function (s, indices) {
-  let a = [];
+  const result = [];
 
   for (let i = 0; i < indices.length; i++) {
-    a.push({ a: indices[i], b: s[i] });
+    result.push({ targetIndex: indices[i], originalCharacter: s[i] });
   }
 
-  return a
-    .sort((a, b) => a.a - b.a)
-    .map((x) => x.b)
+  return result
+    .sort((a, b) => a.targetIndex - b.targetIndex)
+    .map((x) => x.originalCharacter)
     .join("");
 };
