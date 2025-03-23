@@ -3,13 +3,13 @@
  * @return {boolean}
  */
 var isThree = function (n) {
-  let a = 2;
+  let result = 2;
 
   for (let i = 2; i < n; i++) {
     if (n % i === 0) {
-      a++;
+      result++;
     }
   }
 
-  return a === 3;
+  return result === 3;
 };
