@@ -4,16 +4,16 @@
  * @return {boolean}
  */
 var canConstruct = function (ransomNote, magazine) {
-  a = ransomNote.split("");
-  b = magazine.split("");
-  c = 0;
+  ransomNote = ransomNote.split("");
+  magazine = magazine.split("");
+  let result = 0;
 
-  for (let i = 0; i < a.length; i++) {
-    if (b.includes(a[i])) {
-      c++;
-      b.splice(b.indexOf(a[i]), 1);
+  for (let i = 0; i < ransomNote.length; i++) {
+    if (magazine.includes(ransomNote[i])) {
+      result++;
+      magazine.splice(magazine.indexOf(ransomNote[i]), 1);
     }
   }
 
-  return c === ransomNote.length;
+  return result === ransomNote.length;
 };
