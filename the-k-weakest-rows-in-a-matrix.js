@@ -4,14 +4,14 @@
  * @return {number[]}
  */
 var kWeakestRows = function (mat, k) {
-  let a = [];
+  const result = [];
 
   for (let i = 0; i < mat.length; i++) {
-    a.push({ a: i, b: mat[i].filter(Boolean).length });
+    result.push({ rowIndex: i, soldierCount: mat[i].filter(Boolean).length });
   }
 
-  return a
-    .sort((a, b) => a.b - b.b)
+  return result
+    .sort((a, b) => a.soldierCount - b.soldierCount)
     .slice(0, k)
-    .map((x) => x.a);
+    .map((x) => x.rowIndex);
 };
