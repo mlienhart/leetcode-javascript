@@ -4,17 +4,17 @@
  * @return {number[]}
  */
 var pivotArray = function (nums, pivot) {
-  let a = [];
-  let b = [];
-  let c = [];
+  let lessThanPivotList = [];
+  let equalToPivotList = [];
+  let greaterThanPivotList = [];
 
   for (let i = 0; i < nums.length; i++) {
     nums[i] < pivot
-      ? a.push(nums[i])
+      ? lessThanPivotList.push(nums[i])
       : nums[i] === pivot
-      ? b.push(nums[i])
-      : c.push(nums[i]);
+      ? equalToPivotList.push(nums[i])
+      : greaterThanPivotList.push(nums[i]);
   }
 
-  return [...a, ...b, ...c];
+  return [...lessThanPivotList, ...equalToPivotList, ...greaterThanPivotList];
 };
