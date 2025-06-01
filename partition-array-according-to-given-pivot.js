@@ -4,9 +4,9 @@
  * @return {number[]}
  */
 var pivotArray = function (nums, pivot) {
-  let lessThanPivotList = [];
-  let equalToPivotList = [];
-  let greaterThanPivotList = [];
+  const lessThanPivotList = [];
+  const equalToPivotList = [];
+  const greaterThanPivotList = [];
 
   for (let i = 0; i < nums.length; i++) {
     nums[i] < pivot
