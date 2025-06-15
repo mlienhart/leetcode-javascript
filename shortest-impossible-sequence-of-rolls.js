@@ -4,7 +4,7 @@
  * @return {number}
  */
 var shortestSequence = function (rolls, k) {
-  const set = new Set();
+  let set = new Set();
   let result = 1;
 
   for (const roll of rolls) {
