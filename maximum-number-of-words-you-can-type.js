@@ -4,17 +4,17 @@
  * @return {number}
  */
 var canBeTypedWords = function (text, brokenLetters) {
-  let a = text.split(" ");
-  let b = brokenLetters.split("");
-  let c = new Set();
+  text = text.split(" ");
+  brokenLetters = brokenLetters.split("");
+  let result = new Set();
 
-  for (let i = 0; i < a.length; i++) {
+  for (let i = 0; i < text.length; i++) {
     for (let j = 0; j < b.length; j++) {
-      if (a[i].includes(b[j])) {
-        c.add(i);
+      if (text[i].includes(b[j])) {
+        result.add(i);
       }
     }
   }
 
-  return a.length - c.size;
+  return text.length - result.size;
 };
