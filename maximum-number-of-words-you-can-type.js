@@ -9,8 +9,8 @@ var canBeTypedWords = function (text, brokenLetters) {
   let result = new Set();
 
   for (let i = 0; i < text.length; i++) {
-    for (let j = 0; j < b.length; j++) {
-      if (text[i].includes(b[j])) {
+    for (let j = 0; j < brokenLetters.length; j++) {
+      if (text[i].includes(brokenLetters[j])) {
         result.add(i);
       }
     }
