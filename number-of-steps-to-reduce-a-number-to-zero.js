@@ -3,22 +3,12 @@
  * @return {number}
  */
 var numberOfSteps = function (num) {
-  let a = num;
-  let b = 0;
+  let steps = 0;
 
-  for (let i = 0; i < num; i++) {
-    if (a === 0) {
-      return b;
-    }
-    if (a % 2 === 0) {
-      a /= 2;
-      b++;
-    }
-    if (a % 2 !== 0) {
-      a -= 1;
-      b++;
-    }
+  while (num > 0) {
+    num % 2 === 0 ? (num /= 2) : (num -= 1);
+    steps++;
   }
 
-  return b;
+  return steps;
 };
