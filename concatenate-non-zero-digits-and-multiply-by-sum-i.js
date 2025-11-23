@@ -9,5 +9,5 @@ var sumAndMultiply = function (n) {
     .map((x) => +x)
     .filter(Boolean);
 
-  return result.join("") * result.reduce((a, b) => a + b, 0);
+  return +result.join("") * result.reduce((a, b) => a + b, 0);
 };
