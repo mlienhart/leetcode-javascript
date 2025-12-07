@@ -3,14 +3,18 @@
  * @return {number}
  */
 var mostFrequentEven = function (nums) {
-  const a = {};
+  const counts = {};
 
-  for (const b of nums) {
-    a[b] = a[b] ? a[b] + 1 : 1;
+  for (const number of nums) {
+    counts[number] = counts[number] ? counts[number] + 1 : 1;
   }
 
-  const c = Object.entries(a).sort((a, b) => b[1] - a[1]);
-  const d = +c.find((x) => x[0] % 2 === 0)?.[0];
+  const sortedEntries = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+  const mostFrequentEvenNumber = +sortedEntries.find(
+    (x) => x[0] % 2 === 0
+  )?.[0];
 
-  return d || d === 0 ? d : -1;
+  return mostFrequentEvenNumber || mostFrequentEvenNumber === 0
+    ? mostFrequentEvenNumber
+    : -1;
 };
